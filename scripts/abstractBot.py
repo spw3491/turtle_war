@@ -34,7 +34,7 @@ class AbstractBot(object):
 
         # camera subscriver
         # please uncoment out if you use camera
-        #self.image_sub = rospy.Subscriber('/camera/rgb/image_raw', Image, self.imageCallback)
+        self.image_sub = rospy.Subscriber('/camera/rgb/image_raw', Image, self.imageCallback)
 
     # bumper topic call back sample
     # update bumper state
