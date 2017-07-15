@@ -47,17 +47,17 @@ class RandomBot(AbstractBot):
                 update_time = time.time()
                 rospy.loginfo('bumper hit!!')                       
 
-                control_speed = -0.05
-                target_speed  = -0.05
+                control_speed = -0.1
+                target_speed  = -0.1
 
                 #control_turn = 1
-                #target_turn  = 1
+                target_turn  = -1.5
 
-                if self.L_val < self.R_val:
+                #if self.L_val < self.R_val:
 		#control_turn  = 1.0                    
-		     target_turn  = 1.0
-                else:
-                    target_turn  = -1.0 
+		#     target_turn  = 1.5
+                #else:
+                #    target_turn  = -1.5 
 
                 # init
                 th_cnt = 0.0
@@ -74,12 +74,12 @@ class RandomBot(AbstractBot):
                 update_time = time.time()
                 rospy.loginfo('near wall ---- !!')
 
-                control_speed = 0
-                target_speed  = 0
+                control_speed = -0.1
+                target_speed  = -0.1
 
                 #if self.L_val > self.R_val:
-                control_turn = -1.0
-                target_turn  = -1.0
+                control_turn = -1.5
+                target_turn  = -1.5
                 #else:
                 #    control_turn = -1.0
                 #    target_turn  = -1.0
@@ -212,7 +212,7 @@ class RandomBot(AbstractBot):
                     #    target_speed  = 0.5
                     #    target_turn   = 3
 
-		    target_speed  = 0.5
+		    target_speed  = -0.5
                     target_turn   = -3
 
             #print http://programming-study.com/technology/python-print/
